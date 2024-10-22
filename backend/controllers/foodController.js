@@ -1,17 +1,17 @@
 import foodModel from "../models/foodModel.js"; 
 import fs from 'fs';
-import multer from 'multer';
+// import multer from 'multer';
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'uploads/');
-  },
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + '-' + file.originalname);
-  }
-});
+// const storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, 'uploads/');
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, Date.now() + '-' + file.originalname);
+//   }
+// });
 
-const upload = multer({ storage: storage });
+// const upload = multer({ storage: storage });
 
 const addFood = async (req, res) => {
   console.log("Request Body:", req.body);
@@ -49,8 +49,6 @@ const addFood = async (req, res) => {
 
 
 
-
-
 // list food 
 const listFood = async(req,res) =>{
   try {
@@ -82,4 +80,4 @@ const removeFood = async(req,res)=>{
     }
 }
 
-export { addFood,listFood,removeFood, multer };
+export { addFood,listFood,removeFood };
