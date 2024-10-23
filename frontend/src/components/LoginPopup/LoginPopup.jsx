@@ -34,6 +34,14 @@ const LoginPopup = ({setShowLogin}) => {
         if (response.data.success) {
           setToken(response.data.token);
           localStorage.setItem("token",response.data.token)
+
+          console.log(response.data)
+          if (response.data.isAdmin) {
+            const url = new URL("http://localhost:5174/callback")
+            url.searchParams.append("token", response.data.token)
+            window.location.href = url.toString()
+          }
+
           setShowLogin(false)
         }
         else{

@@ -17,7 +17,7 @@ const Navbar = ({setShowLogin}) => {
 
   return (
     <div className='navbar'>
-      <img src= {assets.logo} alt="" className="logo" />  
+      <img src= "/image.png" alt="" className="logo" />  
       <ul className="navbar-menu">
         <Link to='/' onClick={()=>setMenu("home")} className={menu==="home"?"active":""}>home</Link>
         <a href='#explore-menu' onClick={()=>setMenu("menu")} className={menu==="menu"?"active":""}>menu</a>
@@ -25,6 +25,7 @@ const Navbar = ({setShowLogin}) => {
         <a href='#footer' onClick={()=>setMenu("contact us")} className={menu==="contact us"?"active":""}>contact us</a>
       </ul>
       <div className="navbar-right">
+        {/* <a className='admin-button' href="http://localhost:5174">Go to admin panel</a> */}
         <img src= {assets.search_icon} alt="" />
         <div className="navbar-search-icon">
             <Link to='/Cart'><img src= {assets.basket_icon} alt="" /> </Link>
