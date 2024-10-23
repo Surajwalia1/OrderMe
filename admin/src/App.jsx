@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import Add from './pages/Add/Add'
 import List from './pages/List/List'
 import Orders from './pages/Orders/Orders'
+import Callback from "./pages/Callback/Callback"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -23,6 +24,7 @@ const url ="http://localhost:4000"
           <Route path="/add" element={<Add url={url} />} />
           <Route path="/list" element={<List url={url}/>} />
           <Route path="/orders" element={<Orders url={url}/>} />
+          <Route path="/callback" element={<Callback />} />
         </Routes>
       </div>
     </div>
