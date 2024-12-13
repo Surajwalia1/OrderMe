@@ -9,7 +9,7 @@ const Sidebar = () => {
     return (
         <div className='sidebar'>
             <div className="sidebar-options">
-                <NavLink to='http://localhost:5173/' className="sidebar-option">
+                <NavLink to='https://order-me-admin.vercel.app/' className="sidebar-option">
                     <img src={assets.order_icon} alt="" />
                     <p onClick={() => navigate("/")}>Home</p> {/* Use navigate for programmatic navigation */}
                 </NavLink>

@@ -37,7 +37,7 @@ const LoginPopup = ({setShowLogin}) => {
 
           console.log(response.data)
           if (response.data.isAdmin) {
-            const url = new URL("http://localhost:5174/callback")
+            const url = new URL("https://order-me-admin.vercel.app/")
             url.searchParams.append("token", response.data.token)
             window.location.href = url.toString()
           }
